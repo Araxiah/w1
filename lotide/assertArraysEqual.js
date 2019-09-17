@@ -1,5 +1,6 @@
+
 const eqArrays = function (array1, array2) {
-  for (i = 0; i < array2.length; i++) {
+  for (i = 0; i < array1.length; i++) {
     if (array1[i] == array2[i]) {
       return true
     } else {
@@ -11,8 +12,11 @@ const eqArrays = function (array1, array2) {
 const assertArraysEqual = function (array1, array2) {
   let result = eqArrays(array1, array2)
   if (result === true) {
-    console.log(`:^) you did it!`)
+    return console.log(`:^) you did it!`)
   } else {
-    console.log(`:^( try again...`)
+    return console.log(`:^( try again...`)
   }
 }
+
+console.log(eqArrays([1, 2, 3], [1, 2, 3]));
+assertArraysEqual([1, 2, 3], [1, 2, 3])

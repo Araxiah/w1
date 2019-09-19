@@ -30,7 +30,7 @@ const eqObjects = function (object1, object2) {
 
   for (const key of objOne) {
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
-      if (eqArrays(object1[key], object2[key]) === false) {
+      if (isArrayTrue(object1[key], object2[key]) === false) {
         return false
       }
 

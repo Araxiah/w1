@@ -11,7 +11,7 @@ const assertEqual = function (actual, expected) {
 const countLetters = function (string) {
   let results = {}
   let stringWithoutSpaces = string.replace(/\s/g, '')
-  console.log(stringWithoutSpaces)
+
   for (const item of stringWithoutSpaces) {
     if ([item]) {
       if (results[item]) {

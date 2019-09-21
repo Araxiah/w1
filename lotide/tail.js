@@ -15,12 +15,12 @@ assertEqual(4, 7);
 
 
 const tail = function(array) {
-  let newArray = []
-  for(i = 1; i < array.length; i++){
+  let newArray = [];
+  for (let i = 1; i < array.length; i++) {
     newArray.push(array[i]);
   }
   return newArray;
-}
+};
 
 const result = tail(["hi", "ahh", "cool"]);
 assertEqual(result.length, 2);

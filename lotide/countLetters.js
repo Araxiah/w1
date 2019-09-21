@@ -7,8 +7,8 @@ const assertEqual = function(actual, expected) {
 };
 
 const countLetters = function(string) {
-  let results = {}
-  let stringWithoutSpaces = string.replace(/\s/g, '')
+  let results = {};
+  let stringWithoutSpaces = string.replace(/\s/g, '');
   for (const item of stringWithoutSpaces) {
     if ([item]) {
       if (results[item]) {
@@ -19,5 +19,6 @@ const countLetters = function(string) {
     }
   }
   return results;
-}
-console.log(countLetters('oh wow look this is cool'))
+};
+
+assertEqual(countLetters('oh wow look this is cool').o, 6);

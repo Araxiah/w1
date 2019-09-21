@@ -1,38 +1,36 @@
-
-const eqArrays = function (array1, array2) {
+const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   }
-
   for (i = 0; i < array2.length; i++) {
     if (array1[i] == array2[i]) {
-      return true
+      return true;
     } else {
-      return false
+      return false;
     }
   }
 }
 
-const assertArraysEqual = function (array1, array2) {
-  let result = eqArrays(array1, array2)
+const assertArraysEqual = function(array1, array2) {
+  let result = eqArrays(array1, array2);
   if (result === true) {
-    return console.log(`:^) you did it!`)
+    return console.log(`:^) you did it!`);
   } else {
-    return console.log(`:^( try again...`)
+    return console.log(`:^( try again...`);
   }
 }
 
-const middle = function (array) {
+const middle = function(array) {
   if (array.length <= 2) {
-    return []
+    return [];
   }
   let midTwo = Math.floor(array.length / 2 + 1);
-  let mid = Math.floor(array.length / 2)
+  let mid = Math.floor(array.length / 2);
 
   if (array.length % 2 === 0) {
     return [array[mid - 1], array[midTwo - 1]];
   } else {
-    return array[mid]
+    return array[mid];
   }
 }
 

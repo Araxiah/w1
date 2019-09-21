@@ -1,29 +1,14 @@
-const isArrayTrue = function (arrayOne, arrayTwo) {
-  if (arrayOne.length !== arrayTwo.length) {
-    return false
-  }
-  for (i = 0; i < arrayOne.length; i++) {
-    if (arrayOne[i] !== arrayTwo[i]) {
-      return false
-    }
-  }
-  return true;
-}
-
-const eqObjects = function (object1, object2) {
+const eqObjects = function(object1, object2) {
   let objOne = Object.keys(object1)
   let objTwo = Object.keys(object2)
-
   if (objOne.length != objTwo.length) {
     return false;
   }
-
   for (const key of objOne) {
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
       if (isArrayTrue(object1[key], object2[key]) === false) {
         return false
       }
-
     } else {
       if (object1[key] != object2[key]) {
         return false
@@ -34,7 +19,6 @@ const eqObjects = function (object1, object2) {
 }
 
 const assertObjectsEqual = function (actual, expected) {
-
   const inspect = require('util').inspect;
   if (eqObjects(actual, expected)) {
     console.log(`🙂  Assertion Passed: ${inspect(actual)} ===  ${inspect(expected)}`)
@@ -51,3 +35,5 @@ const cd2 = { c: "1", d: ["2", 3, 4] };
 console.log(eqObjects(cd, cd2)); // => false
 
 assertObjectsEqual(cd, dc)
+isArrayTrue(cd, dc)
+eqObjects(cd, dc)

@@ -1,8 +1,8 @@
 const words = ["ground", "control", "to", "major", "tom"];
 
-const map = function (array, callback) {
+const map = function(array, callback) {
   const results = [];
-  for (let item of array) {
+  for(let item of array) {
     console.log('item BEFORE: ', item);
     console.log('item AFTER: ', callback(item));
     console.log('---');
@@ -10,7 +10,7 @@ const map = function (array, callback) {
   return results;
 }
 
-const callback = function (i) {
-  return i[0]
+const callback = function(i) {
+  return i[0];
 }
-console.log(map(words, callback))
+map(words, callback);

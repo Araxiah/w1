@@ -9,14 +9,15 @@ const eqArrays = function (array1, array2) {
   }
 }
 
-const assertArraysEqual = function (array1, array2) {
-  let result = eqArrays(array1, array2)
+const assertArraysEqual = function(array1, array2) {
+  let result = eqArrays(array1, array2);
   if (result === true) {
-    return console.log(`:^) you did it!`)
+    return console.log(`:^) you did it!`);
   } else {
-    return console.log(`:^( try again...`)
+    return console.log(`:^( try again...`);
   }
 }
 
-console.log(eqArrays([1, 2, 3], [1, 2, 3]));
-assertArraysEqual([1, 2, 3], [1, 2, 3])
+
+assertArraysEqual([1, 2, 3], [1, 2, 3]);
+eqArrays([1, 2, 3], [1, 2, 3]);

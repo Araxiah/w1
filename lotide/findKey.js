@@ -1,8 +1,7 @@
-const findKey = function (item, callback) {
-
+const findKey = function(item, callback) {
   for (let x in item)
     if (callback(item[x])) {
-      return x
+      return x;
     }
 }
 
